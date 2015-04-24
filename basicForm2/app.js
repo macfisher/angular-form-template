@@ -11,5 +11,8 @@ validationApp.controller('mainController', function($scope) {
 		if (isValid) {
 			alert('Our form is VALID');
 		}
+		
+		//store submitted variable as true as soon as form is submitted
+		$scope.submitted = true;
 	};
 });
