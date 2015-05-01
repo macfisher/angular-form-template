@@ -1,0 +1,31 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+	<style>
+		body { padding-top: 50px; }
+		form { margin-bottom: 50px; }
+	</style>
+	
+	<!-- JS -->
+	<!-- load AngularJS and custom script -->
+	<script src="http://code.angularjs.org/1.2.13/angular.js"></script>
+	<script src="app.js"></script>
+</head>
+
+<body ng-app="formApp" ng-controller="formController">
+	
+<div class="col-xs-12 col-sm-10 col-sm-offset-1">
+	<form name="userForm" novalidate>
+		<div class="form-group" ng-repeat="user in formData.users" ng-class="{ 'has-error' : userFieldForm.email.$invalid }">
+			<ng-form name="userFieldForm">
+				<label>{{ user.name }}'s Email</label>
+				<input type="text" class="form-control" name="email" ng-model="user.email" required>
+				<p class="help-block" ng-show="userFieldForm.email.$invalid">Valid Email Address Required</p>
+			</ng-form>
+		</div>
+	</form>
+</div>
+</html>
+</head>
