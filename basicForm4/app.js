@@ -5,11 +5,11 @@ var formApp = angular.module('formApp', [])
 		var users = [
 			{
 				name: 'Mac',
-				email: 'macfisher01@gmail.com'
+				email: ''
 			},
 			{
 				name: 'Mui',
-				email: 'bkkforlife@hotmail.com'
+				email: ''
 			}
 		];
 		
